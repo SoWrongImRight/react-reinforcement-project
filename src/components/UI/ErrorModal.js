@@ -1,10 +1,14 @@
+// Import from framework
 import React from 'react';
 
+// Import user created components
 import Card from './Card';
 import Button from './Button';
 
+// Import css module
 import style from './ErrorModal.module.css';
 
+// Create a generic Modal components for error notification.  Receives title and message from props and clears the error state when onConfirm is called.
 const ErrorModal = (props) => {
   return (
     <div>

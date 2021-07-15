@@ -1,16 +1,21 @@
+// Import from framework
 import React, { useState } from 'react';
 
+// Import user created components
 import Card from '../UI/Card';
 import Button from '../UI/Button';
 import ErrorModal from '../UI/ErrorModal';
 
+// Import css module
 import style from './AddUser.module.css';
 
 const AddUser = (props) => {
+  // Set user data state hooks
   const [enteredUsername, setEnteredUsername] = useState('');
   const [enteredAge, setEnteredAge] = useState('');
   const [error, setError] = useState();
 
+  // Takes input from user and adds some error handling based on input
   const addUserHandler = (event) => {
     event.preventDefault();
     if (enteredUsername.trim().length === 0 || enteredAge.trim().length === 0) {
